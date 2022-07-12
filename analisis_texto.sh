@@ -8,17 +8,18 @@ FILE=$1
 [ ! -r  $FILE ] && echo "El archivo no tiene permiso de lectura" && exit 3
 [ ! -x  $FILE ] && echo "El archivo no tiene permiso de ejecución" && exit 4
 
-echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/n)"
-read RESP
-#while [ "$RESP" != "S" ] || [ "$RESP" != "n" ]
+echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/N)"; read RESP
+
+#while ([ "$RESP" != "S" ] || [ "$RESP" != "N" ])
 #do 
-#	echo "El valor ingresado no es correcto ("S" para SI y "n" para no)"	
-#	echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/n)"
+#	clear
+#	echo "El valor ingresado no es correcto (S para SI y N para no)"	
+#	echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/N)"
 #	read RESP
 #done	
 if [[ "$RESP" == "S" ]] 
 then 
-	source menu.sh 
+	source menu.sh $FILE 
 elif [[ "$RESP" == "n" ]]
 then	
 	echo "Ha finalizado el programa. Hasta luego!"	

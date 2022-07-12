@@ -21,12 +21,16 @@ tengan al menos 4 letras y de éstas, elege las 10 más usadas."
 	echo 
 	echo "6. Terminar el programa (Salir)."
 	echo 
-	read -p "Elija una opción ingresando el número correspondiente" OPC 
+	read -p "Elija una opción ingresando el número correspondiente: " OPC 
 
 	case $OPC in 
 		1)clear 
 			echo "Ha elegido la opción $OPC"
-			sleep 3
+			echo
+			echo "Esta opoción devuelve un un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+			sleep 5
+			source statsWords.sh $1
+			sleep 9
 			;;
 		2)clear
                         echo "Ha elegido la opción $OPC"

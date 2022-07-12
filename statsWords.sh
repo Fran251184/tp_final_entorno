@@ -7,7 +7,6 @@ do
 	SOLO_LETRAS=$(echo $i | tr -dc "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚÜü")
 	P_LARGA=$SOLO_LETRAS
 	P_CORTA=$SOLO_LETRAS
-	echo $P_LARGA
 	echo
 	break	
 done
@@ -30,8 +29,10 @@ done
 LEN_PL=${#P_LARGA}
 LEN_PC=${#P_CORTA}
 PROMEDIO=$(($SUM_LONG / $CONT))
-echo "La palabra más larga es $P_LARGA con un len de $LEN_PL."
-echo "La palabra mas corta es $P_CORTA con un len de $LEN_PC."
-echo "El promedio de longitud de palabra es $PROMEDIO."
 
-exit 0
+echo "En el texto pretenenciente al archivo $1:"
+echo
+echo "-La palabra más larga es $P_LARGA con un len de $LEN_PL."
+echo "-La palabra mas corta es $P_CORTA con un len de $LEN_PC."
+echo "-El promedio de longitud de palabra es $PROMEDIO."
+
