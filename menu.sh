@@ -26,7 +26,10 @@ tengan al menos 4 letras y de éstas, elege las 10 más usadas."
 	case $OPC in 
 		1)clear 
 			echo "Ha elegido la opción $OPC"
+			echo
+			echo "Esta opoción devuelve un un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
 			sleep 3
+			source 
 			;;
 		2)clear
                         echo "Ha elegido la opción $OPC"
