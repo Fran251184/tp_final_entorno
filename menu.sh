@@ -7,7 +7,7 @@ do
 	clear
 	echo "¿Qué desea hacer de acuerdo al siguiente menu?"
 	echo 
-	echo "1. Esta opoción devuelve un undicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+	echo "1. Esta opoción devuelve un un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
 	echo 
 	echo "2. Esta opción devuelve el un indicador estadístico de uso de palabras, deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene
 más apariciones a la que tiene menos). Es decir, filtra las palabras que
