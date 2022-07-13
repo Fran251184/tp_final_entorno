@@ -7,11 +7,9 @@ do
 	clear
 	echo "¿Qué desea hacer de acuerdo al siguiente menu?"
 	echo 
-	echo "1. Esta opoción devuelve un un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+	echo "1. Esta opoción devuelve un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
 	echo 
-	echo "2. Esta opción devuelve el un indicador estadístico de uso de palabras, deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene
-más apariciones a la que tiene menos). Es decir, filtra las palabras que
-tengan al menos 4 letras y de éstas, elege las 10 más usadas."
+	echo "2. Esta opción devuelve el un indicador estadístico de uso de palabras, deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene más apariciones a la que tiene menos). Es decir, filtra las palabras que tengan al menos 4 letras y de éstas, elige las 10 más usadas."
 	echo 
 	echo "3. Esta opición identifica los nombres propios (se identifican sólo si están en este formato Nnnnnnnnn), aunque la palabra no sea un nombre propio realmente. Ejemplos: Mateo, Estonoesunnombre, Ana."
 	echo 
@@ -34,8 +32,12 @@ tengan al menos 4 letras y de éstas, elege las 10 más usadas."
 			;;
 		2)clear
                         echo "Ha elegido la opción $OPC"
+			echo
+			echo "Esta opción devuelve el un indicador estadístico de uso de palabras, deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene más apariciones a la que tiene menos). Es decir, filtra las palabras que tengan al menos 4 letras y de éstas, elige las 10 más usadas."
+			sleep 5
+			source statsUsageWords.sh $1
+			sleep 9	
 			;;
-
 		3)clear
                         echo "Ha elegido la opción $OPC"
 			;;

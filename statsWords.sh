@@ -32,7 +32,7 @@ PROMEDIO=$(($SUM_LONG / $CONT))
 
 echo "En el texto pretenenciente al archivo $1:"
 echo
-echo "-La palabra más larga es $P_LARGA con un len de $LEN_PL."
-echo "-La palabra mas corta es $P_CORTA con un len de $LEN_PC."
+echo "-La palabra más larga es ($P_LARGA) con un len de $LEN_PL."
+echo "-La palabra mas corta es ($P_CORTA) con un len de $LEN_PC."
 echo "-El promedio de longitud de palabra es $PROMEDIO."
 
