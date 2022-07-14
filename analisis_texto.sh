@@ -8,6 +8,11 @@ FILE=$1
 [ ! -r  $FILE ] && echo "El archivo no tiene permiso de lectura" && exit 3
 [ ! -x  $FILE ] && echo "El archivo no tiene permiso de ejecución" && exit 4
 
+
+echo "Ingrese su nombre (sólo el nombre, sin espacios): "; read NOM
+echo
+echo "Hola $NOM"
+echo
 echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/N)"; read RESP
 
 #while ([ "$RESP" != "S" ] || [ "$RESP" != "N" ])
@@ -19,7 +24,7 @@ echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/N)"; read RESP
 #done	
 if [[ "$RESP" == "S" ]] 
 then 
-	source menu.sh $FILE 
+	source menu.sh $FILE $NOM 
 elif [[ "$RESP" == "n" ]]
 then	
 	echo "Ha finalizado el programa. Hasta luego!"	

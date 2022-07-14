@@ -1,0 +1,28 @@
+RESULTADOS DEL ANALISI DE fran PARA EL TEXTO DEL ACHIVO rayuela.txt
+
+
+
+ANÁLISIS LONGITUD DE PALABRAS (mié 13 jul 2022 23:53:31 -03)
+
+Idicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud).
+
+
+-La palabra más larga es (Encontraría) con un len de 11.
+-La palabra más corta es (a) con un len de 1.
+-El promedio de longitud de palabra es 4.
+
+ANÁLISIS DE USO DE PALABRAS (mié 13 jul 2022 23:53:51 -03)
+
+Top ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras.
+
+3 es el número de frecuencia de la palabra (veces)
+2 es el número de frecuencia de la palabra (sobre)
+2 es el número de frecuencia de la palabra (Maga)
+2 es el número de frecuencia de la palabra (delgada)
+2 es el número de frecuencia de la palabra (casual)
+1 es el número de frecuencia de la palabra (viniendo)
+1 es el número de frecuencia de la palabra (vidas)
+1 es el número de frecuencia de la palabra (tubo)
+1 es el número de frecuencia de la palabra (Tantas)
+1 es el número de frecuencia de la palabra (subir)
+

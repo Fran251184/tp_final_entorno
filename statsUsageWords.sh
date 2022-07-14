@@ -25,7 +25,9 @@ cat palabra2.txt | sort -r | uniq > palabra3.txt
 echo "El top ten de palabras con su frecuencia de aparición del texto del arivho $1 es:"
 echo
 cat palabra3.txt | head -10 
+cat palabra3.txt | head -10 >> resultados_$2_$1 
 echo
+echo >> resultados_$2_$1
 rm palabra1.txt palabra2.txt palabra3.txt 
 
 #El uso grep -c solo contara el número de líneas que contienen la palabra coincidente en lugar del número total de coincidencias. La opción -o es la que le dice a grep que muestre cada coincidencia en una línea única y luego wc -l le dice a wc que cuente el número de líneas. Así es como se deduce el número total de palabras coincidentes. 

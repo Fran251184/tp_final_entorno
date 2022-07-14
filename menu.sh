@@ -1,11 +1,16 @@
 #!/bin/bash
 
 OPC=0
-
+touch resultados_$2_$1
+chmod 777 resultados_$2_$1
+echo "RESULTADOS DEL ANALISIS DE $2 PARA EL TEXTO DEL ACHIVO $1" >> resultados_$2_$1
+echo >> resultados_$2_$1
+echo >> resultados_$2_$1
+echo >> resultados_$2_$1
 while [ $OPC -ne 6 ]
 do
 	clear
-	echo "¿Qué desea hacer de acuerdo al siguiente menu?"
+	echo "$2 ¿Qué desea hacer de acuerdo al siguiente menu?"
 	echo 
 	echo "1. Esta opoción devuelve un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
 	echo 
@@ -23,19 +28,28 @@ do
 
 	case $OPC in 
 		1)clear 
-			echo "Ha elegido la opción $OPC"
+			echo "ANÁLISIS LONGITUD DE PALABRAS ($(date))" >> resultados_$2_$1
+			echo "Ha elegido la opción $OPC" 
 			echo
-			echo "Esta opoción devuelve un un dicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+			echo >> resultados_$2_$1
+			echo "Idicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+			echo "Idicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
+			echo >> resultados_$2_$1
 			sleep 5
-			source statsWords.sh $1
+			source statsWords.sh $1 $2
 			sleep 9
 			;;
 		2)clear
-                        echo "Ha elegido la opción $OPC"
+			echo "ANÁLISIS DE USO DE PALABRAS ($(date))" >> resultados_$2_$1
+			echo "Ha elegido la opción $OPC"
 			echo
-			echo "Esta opción devuelve el un indicador estadístico de uso de palabras, deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene más apariciones a la que tiene menos). Es decir, filtra las palabras que tengan al menos 4 letras y de éstas, elige las 10 más usadas."
+			echo >> resultados_$2_$1
+			echo "Top ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras."
+			echo "Top ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras." >> resultados_$2_$1
+			echo
+			echo >> resultados_$2_$1
 			sleep 5
-			source statsUsageWords.sh $1
+			source statsUsageWords.sh $1 $2
 			sleep 9	
 			;;
 		3)clear
@@ -50,7 +64,15 @@ do
                         echo "Ha elegido la opción $OPC"
 			;;
 		6)clear
-                        echo "Ha finalizado el programa. Hasta luego!"
+                        cat resultados_$2_$1
+			echo
+			echo
+			echo
+			echo "HA FINALIZADO EL PROGRAMA"
+		       	echo
+			echo "(Recuerde que en el arcivho resultados_$2_$1 que se encuentra en este mismo directorio quedaron guardados los resultados de su análisis)"
+			echo
+			echo "HASTA LUEGO $2!"
 			;;
 		*)clear 
 			echo "No es una opción válida"	
@@ -58,5 +80,5 @@ do
 	
 	esac	
 done
-	echo " "
+	echo 
 
