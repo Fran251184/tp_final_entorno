@@ -7,6 +7,8 @@ FILE=$1
 [ ! -f  $FILE ] && echo "El archivo no es un archivo regular" && exit 2
 [ ! -r  $FILE ] && echo "El archivo no tiene permiso de lectura" && exit 3
 [ ! -x  $FILE ] && echo "El archivo no tiene permiso de ejecución" && exit 4
+[ ! -s  $FILE ] && echo "El archivo no contiene texto alguno" && exit 5
+
 
 
 echo "Ingrese su nombre (sólo el nombre, sin espacios): "; read NOM
@@ -29,3 +31,5 @@ elif [[ "$RESP" == "n" ]]
 then	
 	echo "Ha finalizado el programa. Hasta luego!"	
 fi 
+
+exit 0

@@ -21,7 +21,7 @@ do
 	echo "$NUM es el número de frecuencia de la palabra ($i)" >> palabra2.txt
 done
 
-cat palabra2.txt | sort -r | uniq > palabra3.txt
+cat palabra2.txt | sort -r -f | uniq > palabra3.txt
 echo "El top ten de palabras con su frecuencia de aparición del texto del arivho $1 es:"
 echo
 cat palabra3.txt | head -10 

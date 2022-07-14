@@ -73,12 +73,11 @@ do
 			echo "(Recuerde que en el arcivho resultados_$2_$1 que se encuentra en este mismo directorio quedaron guardados los resultados de su análisis)"
 			echo
 			echo "HASTA LUEGO $2!"
+			exit 0
 			;;
 		*)clear 
 			echo "No es una opción válida"	
-
 	
 	esac	
-done
-	echo 
+done 
 
