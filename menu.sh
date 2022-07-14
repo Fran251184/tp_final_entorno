@@ -3,7 +3,7 @@
 OPC=0
 touch resultados_$2_$1
 chmod 777 resultados_$2_$1
-echo "RESULTADOS DEL ANALISIS DE $2 PARA EL TEXTO DEL ACHIVO $1" > resultados_$2_$1
+echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $1" > resultados_$2_$1
 echo >> resultados_$2_$1
 echo "Fecha: $(date +"%d/%m/%Y")." >> resultados_$2_$1
 echo >> resultados_$2_$1
@@ -61,9 +61,18 @@ do
 			sleep 9	
 			;;
 		3)clear
+                    	echo "ANÁLISIS SOBRE NOMBRES PROPIOS" >> resultados_$2_$1
                         echo "Ha elegido la opción $OPC"
-			;;
-
+                        echo
+                        echo >> resultados_$2_$1
+                        echo "Identificación de nombres propios y palabras con inicio de mayúscula."
+                        echo "Identificación de nombres propios y palabras con inicio de mayúscula." >> resultados_$2_$1
+                        echo
+                        echo >> resultados_$2_$1
+                        sleep 5
+                        source findNames.sh $1 $2
+                        sleep 9
+                        ;;
 		4)clear
                         echo "Ha elegido la opción $OPC"
 			;;
