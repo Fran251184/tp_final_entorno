@@ -65,6 +65,6 @@ echo
 echo >> resultados_$2_$1
 echo "-El promedio de longitud de oraciones (en palabras) de acuerdo al número de oraciones es $(($P_TOTAL / $N_ORACIONES))."
 echo "-El promedio de longitud de oraciones (en palabras) de acuerdo al número de oraciones es $(($P_TOTAL / $N_ORACIONES))." >> resultados_$2_$1
-
+echo >> resultados_$2_$1
 
 

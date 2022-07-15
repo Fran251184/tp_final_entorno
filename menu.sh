@@ -52,8 +52,8 @@ do
 			echo "Ha elegido la opción $OPC"
 			echo
 			echo >> resultados_$2_$1
-			echo "Top ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras."
-			echo "Top ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras." >> resultados_$2_$1
+			echo "Top Ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras."
+			echo "Ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras." >> resultados_$2_$1
 			echo
 			echo >> resultados_$2_$1
 			sleep 5
@@ -87,8 +87,18 @@ do
                         sleep 9
                         ;;
 		5)clear
+                        echo "ANÁLISIS SOBRE LÍNEAS EN BLANCO" >> resultados_$2_$1
                         echo "Ha elegido la opción $OPC"
-			;;
+                        echo
+                        echo >> resultados_$2_$1
+                        echo "Cantidad de línes en blanco."
+                        echo "Cantidad de líneas en blanco." >> resultados_$2_$1
+                        echo
+                        echo >> resultados_$2_$1
+                        sleep 5
+                        source blankLinesCounter.sh $1 $2
+                        sleep 9
+			;;			
 		6)clear
                         cat resultados_$2_$1
 			echo
