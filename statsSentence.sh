@@ -1,5 +1,6 @@
 #!/bin/bash
 
+CONT=0
 for i in $(ls -l | sort $1)
 do
 	if [[ $i =~ ^.+\.$ ]] || [[ $i =~ ^.+\?$ ]] || [[ $i =~ ^.+\!$ ]]
