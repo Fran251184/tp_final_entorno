@@ -35,7 +35,7 @@ do
 	done	
 	case $OPC in 
 		1)clear 
-			echo "ANÁLISIS LONGITUD DE PALABRAS" >> resultados_$2_$1
+			echo "ANÁLISIS SOBRE LONGITUD DE PALABRAS" >> resultados_$2_$1
 			echo "Ha elegido la opción $OPC" 
 			echo
 			echo >> resultados_$2_$1
@@ -48,7 +48,7 @@ do
 			sleep 9
 			;;
 		2)clear
-			echo "ANÁLISIS DE USO DE PALABRAS" >> resultados_$2_$1
+			echo "ANÁLISIS SOBRE USO DE PALABRAS" >> resultados_$2_$1
 			echo "Ha elegido la opción $OPC"
 			echo
 			echo >> resultados_$2_$1

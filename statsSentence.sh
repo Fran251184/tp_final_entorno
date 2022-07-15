@@ -1,6 +1,13 @@
 #!/bin/bash
 
 CONT=0
+O_LARGA=""
+O_CORTA=""
+N_P_LARGA=0
+N_P_CORTA=0
+N_ORACIONES=0
+ORACION=""
+P_TOTAL=0
 for i in $(ls -l | sort $1)
 do
 	if [[ $i =~ ^.+\.$ ]] || [[ $i =~ ^.+\?$ ]] || [[ $i =~ ^.+\!$ ]]

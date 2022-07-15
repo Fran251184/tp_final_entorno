@@ -2,6 +2,9 @@
 
 CONT=0
 SUM_LONG=0
+LEN_PL=0
+LEN_PC=0
+PROMEDIO=0
 for i in $(ls -l | sort $1)
 do
 	SOLO_LETRAS=$(echo $i | tr -dc "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚÜü")
@@ -20,7 +23,7 @@ do
 		P_LAR=$SOLO_LETRAS
 	elif [ ${#SOLO_LETRAS} -lt ${#P_COR} ]
 	then	
-		P_CORTA=$SOLO_LETRAS	
+		P_COR=$SOLO_LETRAS	
 	fi
 
 done
