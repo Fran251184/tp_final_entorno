@@ -12,6 +12,7 @@ FILE=$1
 if [[ $FILE =~ ^.+\.txt$ ]]
 then
 	echo
+	clear
 	echo "Ingrese su nombre (sólo el nombre, sin espacios, utilizando letras mayúsculas o minúsculas): "; read NOM
         echo
 	until [[ $NOM =~ ^[A-Za-sÑñ]+$ ]]

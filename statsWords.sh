@@ -10,7 +10,7 @@ do
 	break	
 done
 
-for i in $(ls -l | sort $1)
+for i in $(ls -l | sort $1)	
 do
 	CONT=$(($CONT+1))
 	SOLO_LETRAS=$(echo $i | tr -dc "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚÜü")

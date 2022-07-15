@@ -1,11 +1,7 @@
 #!/bin/bash
 
-N_P_LARGA=0
-N_P_CORTA=0
-SUM_LONG=0
 for i in $(ls -l | sort $1)
 do
-
 	if [[ $i =~ ^.+\.$ ]] || [[ $i =~ ^.+\?$ ]] || [[ $i =~ ^.+\!$ ]]
 	then
 		O_LARGA+="$i"
@@ -23,26 +19,43 @@ done
 
 for i in $(ls -l | sort $1)
 do
-	CONT=$(($CONT+1))
-	ORACION+="$i " #esta mal. hay que cortar la frase que ya fue evaluada. tal vez un if?
+	CONT=$(($CONT + 1))
+	P_TOTAL=$(($P_TOTAL +1))
+	ORACION+="$i "
 	if [[ $i =~ ^.+\.$ ]] || [[ $i =~ ^.+\?$ ]] || [[ $i =~ ^.+\!$ ]]
-        then
-
+        then	
+		N_ORACIONES=$(($N_ORACIONES +1)) 
 		if [ $CONT -gt $N_P_LARGA ] 
 		then
 			N_P_LARGA=$CONT
 			O_LARGA=$ORACION
 			CONT=0
-			ORACION="-"
+			ORACION=""
+			continue
 		elif [ $CONT -lt $N_P_CORTA ]
 		then	
 			N_P_CORTA=$CONT
 			CONT=0
 			O_CORTA=$ORACION
-			ORACION="-"
+			ORACION=""
+			continue
 		fi	
+		ORACION=""
+		CONT=0
         fi
 done
+
+echo "En el texto del archivo $1:" 
+echo
+echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: "
+echo
 echo $O_LARGA
+echo
+echo "-La oración más corta tiene un len de $N_P_CORTA palabras y es: "
+echo
 echo $O_CORTA
- 
+echo
+echo "-El promedio de longitud de oraciones (midiendo palabras) de acuerdo al numero de oraciones es $(($P_TOTAL / $N_ORACIONES))."
+
+
+
