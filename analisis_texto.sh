@@ -24,7 +24,7 @@ then
 	clear
 	echo "Hola $NOM!"
         echo
-	echo "El siguiente programa hará un análisis del texto del archivo $FILE de aucuerdo a un menú de opciones de análisis. El programa irá mostrando por pantalla los resultados y al finalizar, todos estos resultadados se motrarán también por pantallas. Si usted quiere volver a consultar los resultados de su análisis, ellos quedarán guardados en el archivo resultados_"$NOM"_$FILE en este mismo directorio. Para finalizar el programa, eliga la opcion correspondiente en el menú. "
+	echo "El siguiente programa hará un análisis sobre el texto del archivo $FILE de aucuerdo a un menú de opciones. El programa irá mostrando por pantalla los resultados. Al finalizar, los resultadados se motrarán también por pantallas. Si usted quiere volver a consultar los resultados de su análisis, ellos quedarán guardados en el archivo resultados_"$NOM"_$FILE en este mismo directorio. Para finalizar el programa, eliga la opcion correspondiente en el menú."
 	echo
 	echo "¿Desea hacer el análisis del texto del archivo $FILE? (S/N)"; read RESP
 	echo
@@ -40,6 +40,7 @@ then
         	source menu.sh $FILE $NOM
 	elif [[ "$RESP" == "N" ]]
 	then
+		clear
 		echo "HA FINALIADO EL PROGRAMA" 
 		echo
 		echo "Hasta luego $NOM!"

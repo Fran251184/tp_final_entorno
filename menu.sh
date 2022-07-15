@@ -14,9 +14,9 @@ do
 	echo 
 	echo "1. Esta opoción devuelve un indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
 	echo 
-	echo "2. Esta opción devuelve un indicador estadístico de uso de palabras, las cuales deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de estas palabras ordenadas desde la que tiene más apariciones a la que tiene menos). Es decir, filtra las palabras que tengan al menos 4 letras y de ellas, elige las 10 más usadas."
+	echo "2. Esta opción devuelve un indicador estadístico de uso de palabras que deben ser de al menos 4(cuatro) letras. Además muestra un Top Ten de las palabras (ordenadas desde la que tiene más apariciones a la que tiene menos). Es decir, filtra las palabras que tengan al menos 4 letras y de ellas, elige las 10 más usadas."
 	echo 
-	echo "3. Esta opición identifica los nombres propios (se identifican sólo si están en este formato Nnnnnnnnn), aunque la palabra no sea un nombre propio realmente. Ejemplos: Mateo, Estonoesunnombre, Ana."
+	echo "3. Esta opición identifica los nombres propios (se identifican sólo si están en este formato Nnnnnnnnn, aunque la palabra no sea un nombre propio realmente. Ejemplos: Mateo, Estonoesunnombre, Ana)."
 	echo 
 	echo "4. Esta opción devuelve un indicador estadístico de longitud de oraciones (la más corta, la más larga y el promedio de longitud)."
 	echo 
@@ -87,7 +87,7 @@ do
 			echo
 			echo "HA FINALIZADO EL PROGRAMA"
 		       	echo
-			echo "(Recuerde que en el arcivho resultados_$2_$1 que se encuentra en este mismo directorio quedaron guardados los resultados de su análisis)"
+			echo "(Recuerde que en el arcivho resultados_$2_$1, que se encuentra en este mismo directorio, quedaron guardados los resultados de su análisis)"
 			echo
 			echo "HASTA LUEGO $2!"
 			exit 0
