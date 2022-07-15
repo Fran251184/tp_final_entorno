@@ -74,9 +74,18 @@ do
                         sleep 9
                         ;;
 		4)clear
+                        echo "ANÁLISIS SOBRE LONGITUD DE ORACIONES" >> resultados_$2_$1
                         echo "Ha elegido la opción $OPC"
-			;;
-
+                        echo
+                        echo >> resultados_$2_$1
+                        echo "Indicador estadístico de longitud de oraciones de acuerdo al número de palabras (la más corta, la más larga y el promedio de longitud)."
+                        echo "Indicador estadístico de longitud de oraciones de acuerdo al número de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
+                        echo
+                        echo >> resultados_$2_$1
+                        sleep 5
+                        source statsSentence.sh $1 $2
+                        sleep 9
+                        ;;
 		5)clear
                         echo "Ha elegido la opción $OPC"
 			;;
