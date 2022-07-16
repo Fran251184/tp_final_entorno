@@ -39,8 +39,8 @@ do
 			echo "Ha elegido la opción $OPC" 
 			echo
 			echo >> resultados_$2_$1
-			echo "Idicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
-			echo "Idicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
+			echo "Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
+			echo "Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
 			echo
 			echo >> resultados_$2_$1
 			sleep 5
