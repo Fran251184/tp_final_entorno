@@ -1,12 +1,13 @@
 #!/bin/bash
 
 OPC=0
-touch resultados_$2_$1
-chmod 777 resultados_$2_$1
-echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $1" > resultados_$2_$1
-echo >> resultados_$2_$1
-echo "Fecha: $(date +"%d/%m/%Y")." >> resultados_$2_$1
-echo >> resultados_$2_$1
+NOMBRE="/home/pancho/tuia/data/resultados_$2_$(basename $1)"
+touch $NOMBRE
+chmod 777 $NOMBRE
+echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $NOMBRE" > $NOMBRE
+echo >> $NOMBRE
+echo "Fecha: $(date +"%d/%m/%Y")." >> $NOMBRE
+echo >> $NOMBRE
 while [ $OPC -ne 6 ]
 do
 	clear
@@ -35,78 +36,78 @@ do
 	done	
 	case $OPC in 
 		1)clear 
-			echo "ANÁLISIS SOBRE LONGITUD DE PALABRAS" >> resultados_$2_$1
+			echo "ANÁLISIS SOBRE LONGITUD DE PALABRAS" >> $NOMBRE
 			echo "Ha elegido la opción $OPC" 
 			echo
-			echo >> resultados_$2_$1
+			echo >> $NOMBRE
 			echo "Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)."
-			echo "Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
+			echo "Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud)." >> $NOMBRE
 			echo
-			echo >> resultados_$2_$1
+			echo >> $NOMBRE
 			sleep 5
 			source statsWords.sh $1 $2
 			sleep 9
 			;;
 		2)clear
-			echo "ANÁLISIS SOBRE USO DE PALABRAS" >> resultados_$2_$1
+			echo "ANÁLISIS SOBRE USO DE PALABRAS" >> $NOMBRE
 			echo "Ha elegido la opción $OPC"
 			echo
-			echo >> resultados_$2_$1
+			echo >> $NOMBRE
 			echo "Top Ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras."
-			echo "Ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras." >> resultados_$2_$1
+			echo "Top Ten de indicador estadístico de uso de palabras de al menos 4(cuatro) letras." >> $NOMBRE
 			echo
-			echo >> resultados_$2_$1
+			echo >> $NOMBRE
 			sleep 5
 			source statsUsageWords.sh $1 $2
 			sleep 9	
 			;;
 		3)clear
-                    	echo "ANÁLISIS SOBRE NOMBRES PROPIOS" >> resultados_$2_$1
+                    	echo "ANÁLISIS SOBRE NOMBRES PROPIOS" >> $NOMBRE
                         echo "Ha elegido la opción $OPC"
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         echo "Identificación de nombres propios y palabras con inicio de mayúscula."
-                        echo "Identificación de nombres propios y palabras con inicio de mayúscula." >> resultados_$2_$1
+                        echo "Identificación de nombres propios y palabras con inicio de mayúscula." >> $NOMBRE
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         sleep 5
                         source findNames.sh $1 $2
                         sleep 9
                         ;;
 		4)clear
-                        echo "ANÁLISIS SOBRE LONGITUD DE ORACIONES" >> resultados_$2_$1
+                        echo "ANÁLISIS SOBRE LONGITUD DE ORACIONES" >> $NOMBRE
                         echo "Ha elegido la opción $OPC"
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         echo "Indicador estadístico de longitud de oraciones de acuerdo al número de palabras (la más corta, la más larga y el promedio de longitud)."
-                        echo "Indicador estadístico de longitud de oraciones de acuerdo al número de palabras (la más corta, la más larga y el promedio de longitud)." >> resultados_$2_$1
+                        echo "Indicador estadístico de longitud de oraciones de acuerdo al número de palabras (la más corta, la más larga y el promedio de longitud)." >> $NOMBRE
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         sleep 5
                         source statsSentence.sh $1 $2
                         sleep 9
                         ;;
 		5)clear
-                        echo "ANÁLISIS SOBRE LÍNEAS EN BLANCO" >> resultados_$2_$1
+                        echo "ANÁLISIS SOBRE LÍNEAS EN BLANCO" >> $NOMBRE
                         echo "Ha elegido la opción $OPC"
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         echo "Cantidad de línes en blanco."
-                        echo "Cantidad de líneas en blanco." >> resultados_$2_$1
+                        echo "Cantidad de líneas en blanco." >> $NOMBRE
                         echo
-                        echo >> resultados_$2_$1
+                        echo >> $NOMBRE
                         sleep 5
                         source blankLinesCounter.sh $1 $2
                         sleep 9
 			;;			
 		6)clear
-                        cat resultados_$2_$1
+                        cat $NOMBRE
 			echo
 			echo "-----------------------------------------------------------------------"
 			echo
 			echo "HA FINALIZADO EL PROGRAMA"
 		       	echo
-			echo "(Recuerde que en el arcivho resultados_$2_$1, que se encuentra en este mismo directorio, quedaron guardados los resultados de su análisis)"
+			echo "(Recuerde que en el arcivho $NOMBRE quedaron guardados los resultados de su análisis)"
 			echo
 			echo "HASTA LUEGO $2!"
 			exit 0

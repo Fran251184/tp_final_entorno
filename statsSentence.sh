@@ -56,23 +56,23 @@ done
 echo "En el texto del archivo $1:" 
 echo
 echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: "
-echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: " >> resultados_$2_$1
+echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: " >> $NOMBRE
 echo
-echo >> resultados_$2_$1
+echo >> $NOMBRE
 echo $O_LARGA
-echo $O_LARGA >> resultados_$2_$1
+echo $O_LARGA >> $NOMBRE
 echo
-echo >> resultados_$2_$1
+echo >> $NOMBRE
 echo "-La oración más corta tiene un len de $N_P_CORTA palabras y es: "
-echo "-La oración más corta tiene un len de $N_P_CORTA palabras y es: " >> resultados_$2_$1
+echo "-La oración más corta tiene un len de $N_P_CORTA palabras y es: " >> $NOMBRE
 echo
-echo >> resultados_$2_$1
+echo >> $NOMBRE
 echo $O_CORTA
-echo $O_CORTA >> resultados_$2_$1
+echo $O_CORTA >> $NOMBRE
 echo
-echo >> resultados_$2_$1
+echo >> $NOMBRE
 echo "-El promedio de longitud de oraciones (en palabras) de acuerdo al número de oraciones es $(($P_TOTAL / $N_ORACIONES))."
-echo "-El promedio de longitud de oraciones (en palabras) de acuerdo al número de oraciones es $(($P_TOTAL / $N_ORACIONES))." >> resultados_$2_$1
-echo >> resultados_$2_$1
+echo "-El promedio de longitud de oraciones (en palabras) de acuerdo al número de oraciones es $(($P_TOTAL / $N_ORACIONES))." >> $NOMBRE
+echo >> $NOMBRE
 
 

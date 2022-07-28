@@ -15,6 +15,6 @@ echo "Los nombres propios y palabras que comienzan con mayúscula en el texto de
 echo
 cat nombres.txt
 echo
-cat nombres.txt >> resultados_$2_$1
-echo >> resultados_$2_$1
+cat nombres.txt >> $NOMBRE
+echo >> $NOMBRE
 rm nombres.txt
