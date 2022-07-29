@@ -53,7 +53,7 @@ do
         fi
 done
 
-echo "En el texto del archivo $1:" 
+echo "En el texto del archivo $3:" 
 echo
 echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: "
 echo "-La oración más larga tiene un len de $N_P_LARGA palabras y es: " >> $NOMBRE

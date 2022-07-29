@@ -23,7 +23,7 @@ do
 done
 
 cat palabra2.txt | sort -r -f -u | uniq > palabra3.txt
-echo "El Top Ten de palabras de más de cuatro letras con su frecuencia de aparición en texto del archivo $1 es:"
+echo "El Top Ten de palabras de más de cuatro letras con su frecuencia de aparición en texto del archivo $3 es:"
 echo
 cat palabra3.txt | head -10 
 cat palabra3.txt | head -10 >> $NOMBRE

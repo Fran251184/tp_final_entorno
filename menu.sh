@@ -1,10 +1,10 @@
 #!/bin/bash
 
 OPC=0
-NOMBRE="/home/pancho/tuia/data/resultados_$2_$(basename $1)"
+NOMBRE=resultados_$2_$3
 touch $NOMBRE
 chmod 777 $NOMBRE
-echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $NOMBRE" > $NOMBRE
+echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $3" > $NOMBRE
 echo >> $NOMBRE
 echo "Fecha: $(date +"%d/%m/%Y")." >> $NOMBRE
 echo >> $NOMBRE
@@ -45,7 +45,7 @@ do
 			echo
 			echo >> $NOMBRE
 			sleep 5
-			source statsWords.sh $1 $2
+			source statsWords.sh $1 $2 $3
 			sleep 9
 			;;
 		2)clear
@@ -58,7 +58,7 @@ do
 			echo
 			echo >> $NOMBRE
 			sleep 5
-			source statsUsageWords.sh $1 $2
+			source statsUsageWords.sh $1 $2 $3
 			sleep 9	
 			;;
 		3)clear
@@ -71,7 +71,7 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source findNames.sh $1 $2
+                        source findNames.sh $1 $2 $3
                         sleep 9
                         ;;
 		4)clear
@@ -84,7 +84,7 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source statsSentence.sh $1 $2
+                        source statsSentence.sh $1 $2 $3
                         sleep 9
                         ;;
 		5)clear
@@ -97,17 +97,17 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source blankLinesCounter.sh $1 $2
+                        source blankLinesCounter.sh $1 $2 $3
                         sleep 9
 			;;			
 		6)clear
                         cat $NOMBRE
+			rm $NOMBRE
 			echo
 			echo "-----------------------------------------------------------------------"
 			echo
 			echo "HA FINALIZADO EL PROGRAMA"
 		       	echo
-			echo "(Recuerde que en el arcivho $NOMBRE quedaron guardados los resultados de su análisis)"
 			echo
 			echo "HASTA LUEGO $2!"
 			exit 0
