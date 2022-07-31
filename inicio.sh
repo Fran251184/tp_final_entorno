@@ -48,12 +48,12 @@ then
 	echo
        	echo "$ docker ps"
 	echo
-	echo "(2)En esta otra terminal copie el ID del contenedor que está corriendo el actual programa y ejecute el siguente comando:"
+	echo "(2) En esta otra terminal copie el ID del contenedor que está corriendo el actual programa y ejecute el siguente comando:"
 	echo
 	echo "$ docker cp <ruta_de_su_archivo> <ID>:./<nombre_de_su_archivo>"
 	echo "(Ejemplo: $ docker cp /home/pancho/tuia/mi_texto.txt deced46952fa:./mi_texto.txt)" 
 	echo 
-	echo "(3)Cierre la terminal de bash e ingrese aqui mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta) "; read FILE
+	echo "(3) Cierre la terminal de bash e ingrese aqui mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta) "; read FILE
 	./analisis_texto.sh $FILE $NOM
 fi
 		
