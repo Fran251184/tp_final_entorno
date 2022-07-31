@@ -5,7 +5,6 @@ MAINTAINER franciscojalomar@gmail.com
 ADD [ "inicio.sh", "./" ]
 ADD [ "analisis_texto.sh", "./" ] 
 ADD [ "blankLinesCounter.sh", "./" ]  
-ADD [ "el_tiempo_de_borges.txt", "./" ]  
 ADD [ "findNames.sh", "./" ]
 ADD [ "menu.sh", "./" ] 
 ADD [ "rayuela.txt", "./" ] 
