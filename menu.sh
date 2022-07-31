@@ -1,10 +1,10 @@
 #!/bin/bash
 
 OPC=0
-NOMBRE=resultados_$2_$3
+NOMBRE=resultados_$2_$1
 touch $NOMBRE
 chmod 777 $NOMBRE
-echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $3" > $NOMBRE
+echo "RESULTADOS DEL ANALISIS DE $2 SOBRE EL TEXTO DEL ACHIVO $1" > $NOMBRE
 echo >> $NOMBRE
 echo "Fecha: $(date +"%d/%m/%Y")." >> $NOMBRE
 echo >> $NOMBRE
@@ -45,7 +45,7 @@ do
 			echo
 			echo >> $NOMBRE
 			sleep 5
-			source statsWords.sh $1 $2 $3
+			source statsWords.sh $1 $2 
 			sleep 9
 			;;
 		2)clear
@@ -58,7 +58,7 @@ do
 			echo
 			echo >> $NOMBRE
 			sleep 5
-			source statsUsageWords.sh $1 $2 $3
+			source statsUsageWords.sh $1 $2 
 			sleep 9	
 			;;
 		3)clear
@@ -71,7 +71,7 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source findNames.sh $1 $2 $3
+                        source findNames.sh $1 $2 
                         sleep 9
                         ;;
 		4)clear
@@ -84,7 +84,7 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source statsSentence.sh $1 $2 $3
+                        source statsSentence.sh $1 $2
                         sleep 9
                         ;;
 		5)clear
@@ -97,7 +97,7 @@ do
                         echo
                         echo >> $NOMBRE
                         sleep 5
-                        source blankLinesCounter.sh $1 $2 $3
+                        source blankLinesCounter.sh $1 $2
                         sleep 9
 			;;			
 		6)clear

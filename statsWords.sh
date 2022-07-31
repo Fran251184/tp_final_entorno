@@ -32,7 +32,7 @@ LEN_PL=${#P_LAR}
 LEN_PC=${#P_COR}
 PROMEDIO=$(($SUM_LONG / $CONT))
 
-echo "En el texto pretenenciente al archivo $3:"
+echo "En el texto pretenenciente al archivo $1:"
 echo
 echo "-La palabra más larga es ($P_LAR) con un len de $LEN_PL." 
 echo "-La palabra más larga es ($P_LAR) con un len de $LEN_PL." >> $NOMBRE
