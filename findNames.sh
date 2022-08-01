@@ -11,7 +11,7 @@ do
         fi
 done
 
-echo "Los nombres propios y palabras que comienzan con mayúscula en el texto del archivo $2 son: "
+echo "Los nombres propios y palabras que comienzan con mayúscula en el texto del archivo $1 son: "
 echo
 cat nombres.txt
 echo

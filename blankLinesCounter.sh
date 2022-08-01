@@ -1,7 +1,8 @@
 #!/bin/bash
 
 L_BLANCO=$(awk '!NF {sum += 1} END {print sum}' $1)
-if [[ $L_BLANCO != "^[0123456789]$" ]]
+
+if [[ $L_BLANCO -eq "" ]]
 then 
 	echo "El número de línes en blanco para el archivo $1 es: 0."
 	echo "El número de línes en blanco para el archivo $1 es: 0." >> $NOMBRE
