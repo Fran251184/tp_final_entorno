@@ -6,7 +6,7 @@ Luego debe correr el contenedor mediante el siguiente comando:
 
 $ docker run -it tp_entorno_prog inicio.sh
 
-A aprtir de aquí el programa lo guiara de acuerdo a las opciones que vaya eligiendo. 
+A aprtir de aquí el programa lo guiará de acuerdo a las opciones que vaya eligiendo. 
 
 Saludos! 
 
