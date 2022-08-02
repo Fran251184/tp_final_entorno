@@ -53,7 +53,8 @@ then
 	echo "$ docker cp <ruta_de_su_archivo> <ID>:./<nombre_de_su_archivo>"
 	echo "(Ejemplo: $ docker cp /home/pancho/tuia/mi_texto.txt deced46952fa:./mi_texto.txt)" 
 	echo 
-	echo "(3) Cierre la terminal de bash e ingrese aqui mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta) "; read FILE
+	echo 
+	echo "(3) Cierre la terminal de bash e ingrese aqui mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta). Procure escribir tal cual agregó al contenedor el nombre del archivo, y que sea .txt. De lo contrario el programa se detendrá con una sentencia de error y tendrá que volver a ejecutar el programa, repitiendo este procedimiento."; read FILE
 	./analisis_texto.sh $FILE $NOM
 fi
 		
