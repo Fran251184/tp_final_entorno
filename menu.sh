@@ -92,7 +92,7 @@ do
                         echo "Ha elegido la opción $OPC"
                         echo
                         echo >> $NOMBRE
-                        echo "Cantidad de línes en blanco."
+                        echo "Cantidad de líneas en blanco."
                         echo "Cantidad de líneas en blanco." >> $NOMBRE
                         echo
                         echo >> $NOMBRE

@@ -20,12 +20,12 @@ sleep 7
 echo
 echo "El programa dispone de un ejemplo de analisis sobre un archivo que se llama rayuela.txt. La idea es que usted, mediante este ejemplo, evalue cómo funciona el programa, pero el objetivo es que pueda utilizarlo para el anáilsis de cualquier archivo .txt que disponga en su pc." 
 echo 
-echo "$NOM, ¿quiere usted (1) evaluar qué hace el programa o (2) utilizar el programa para analizar un archivo .txt de su pc? (Ingrese 1 para la primera opción o 2 para la segunda opción)"; read VAR
+echo "$NOM, ¿quiere usted (1) evaluar qué hace el programa o (2) utilizar el programa para analizar un archivo .txt propio? (Ingrese 1 para la primera opción o 2 para la segunda opción)"; read VAR
 
 until ([ $VAR -eq 1 ] || [ $VAR -eq 2 ])
 do
         clear
-	echo "El valor ingresado no es correcto. Ingrese 1 para evaluar qué hace el programa o 2 para analizar un archivo .txt de su pc."
+	echo "El valor ingresado no es correcto. Ingrese 1 para evaluar qué hace el programa o 2 para analizar un archivo .txt propio."
         echo
         echo "Ingrese nuevamente la opción."; read VAR
         echo
@@ -42,7 +42,7 @@ then
 elif [ $VAR -eq 2 ] 
 then	
 	clear
-	echo "Para analizar un archivo .txt que usted desee, primero deberá agregar el archivo al contenedor que corre este mismo programa siguiendo las instrucciones que acontinuación se detallan: "
+	echo "Para analizar un archivo .txt que propio, primero deberá agregar el archivo al contenedor que corre este mismo programa siguiendo las instrucciones que acontinuación se detallan: "
 	echo
 	echo "(1) Abra otra terminal en bash y ejecute el siguiente comando: "
 	echo
@@ -54,7 +54,7 @@ then
 	echo "(Ejemplo: $ docker cp /home/pancho/tuia/mi_texto.txt deced46952fa:./mi_texto.txt)" 
 	echo 
 	echo 
-	echo "(3) Cierre la terminal de bash e ingrese aqui mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta). Procure escribir tal cual agregó al contenedor el nombre del archivo, y que sea .txt. De lo contrario el programa se detendrá con una sentencia de error y tendrá que volver a ejecutar el programa, repitiendo este procedimiento."; read FILE
+	echo "(3) Cierre la terminal de bash e ingrese aquí mismo el nombre del archivo que desea analizar (sólo el nombre, no la ruta). Procure escribir tal cual agregó al contenedor el nombre del archivo, y que sea .txt. De lo contrario el programa se detendrá con una sentencia de error y tendrá que volver a ejecutar el programa, repitiendo este procedimiento."; read FILE
 	./analisis_texto.sh $FILE $NOM
 fi
 		
