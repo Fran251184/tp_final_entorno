@@ -18,7 +18,7 @@ echo
 echo "El siguiente programa hace un análisis sobre el texto de un archivo .txt de aucuerdo a un menú de opciones. El programa muestra por pantalla los resultados. Al finalizar, los resultadados se muestran también por pantallas. Para concluir el programa, eliga la opcion correspondiente en el menú."
 sleep 7
 echo
-echo "El programa dispone de un ejemplo de analisis sobre un archivo que se llama rayuela.txt. La idea es que usted, mediante este ejemplo, evalue cómo funciona el programa, pero el objetivo es que pueda utilizarlo para el anáilsis de cualquier archivo .txt que disponga en su pc." 
+echo "El programa dispone de un ejemplo de analisis sobre un archivo que se llama rayuela.txt. La idea es que usted, mediante este ejemplo, evalue cómo funciona el programa, pero el objetivo es que pueda utilizarlo para el anáilsis de cualquier archivo .txt que disponga." 
 echo 
 echo "$NOM, ¿quiere usted (1) evaluar qué hace el programa o (2) utilizar el programa para analizar un archivo .txt propio? (Ingrese 1 para la primera opción o 2 para la segunda opción)"; read VAR
 
@@ -42,7 +42,7 @@ then
 elif [ $VAR -eq 2 ] 
 then	
 	clear
-	echo "Para analizar un archivo .txt que propio, primero deberá agregar el archivo al contenedor que corre este mismo programa siguiendo las instrucciones que acontinuación se detallan: "
+	echo "Para analizar un archivo .txt propio, primero deberá agregar el archivo al contenedor que corre este mismo programa siguiendo las instrucciones que acontinuación se detallan: "
 	echo
 	echo "(1) Abra otra terminal en bash y ejecute el siguiente comando: "
 	echo
