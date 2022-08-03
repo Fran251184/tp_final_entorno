@@ -2,7 +2,11 @@ El programa hace un analisis de texto de un archivo .txt que usted le ingrese en
 
 $ git clone https://github.com/Fran251184/tp_final_entorno
 
-Luego debe correr el contenedor mediante el siguiente comando:
+Luego debe construir el contenedor mediante el siguiente comando: 
+
+$ docker build -t tp_entorno_prog . 
+
+Por último debe correr el contenedor mediante el siguiente comando:
 
 $ docker run -it tp_entorno_prog inicio.sh
 
